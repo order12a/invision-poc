@@ -14,6 +14,12 @@ module.exports = {
       "chai-friendly/no-unused-expressions": 2,
       "chai-expect/missing-assertion": 2,
     },
+    globals: {
+        browser: false,
+        expect: false,
+        $: false,
+        $$: false
+    },
     "env": {
       "mocha": true,
       "node": true,

@@ -1,9 +1,7 @@
 
-FROM node:11.1.0-alpine
+FROM atlassianlabs/docker-node-jdk-chrome-firefox
 
 WORKDIR /usr/app
-
-RUN apk update && apk add postgresql
 
 COPY package.json .
 RUN npm install --quiet

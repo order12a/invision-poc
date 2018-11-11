@@ -1,5 +1,6 @@
-test_codeship_example:
+test-codeship-example:
   build:
-    image: test_codeship_example
+    context: .
+    shm_size: '6gb'
+    image: test-codeship-example
     dockerfile: Dockerfile
-  cached: true

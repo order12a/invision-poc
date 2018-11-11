@@ -2,15 +2,15 @@ let remoteConfig = require('./wdio.conf.js').config;
 
 let localConfig = Object.assign(remoteConfig, {
 
-    capabilities: [{
-        browserName: 'chrome',
-        maxInstances: 1,
-        chromeOptions: {
-            prefs: {
-                'download.default_directory': downloadDir
-            }
-        }
-    }],
+  capabilities: [{
+    browserName: 'chrome',
+    maxInstances: 1,
+    chromeOptions: {
+      prefs: {
+        'download.default_directory': downloadDir
+      }
+    }
+  }]
 });
 
 // delete Selenoid hub service information for local run

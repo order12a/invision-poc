@@ -1,9 +1,11 @@
 target/
 errorShots/
 allure-results/
+allure-report
 .vscode
 node_modules
 wdio.conf.js
+wdio.local.conf.js
 .gitignore
 package.json
 package-lock.json
