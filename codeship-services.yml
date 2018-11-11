@@ -1,0 +1,5 @@
+test_codeship_example:
+  build:
+    image: test_codeship_example
+    dockerfile: Dockerfile
+  cached: true

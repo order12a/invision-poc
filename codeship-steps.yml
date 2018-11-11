@@ -1,0 +1,12 @@
+- type: serial
+  tag: "^(master|staging/.*)$"
+  steps:
+    - name: lint
+      service: test_codeship_example
+      command: npm run lint
+    - name: tests
+      service: test_codeship_example
+      command: /bin/sh -c "npm run clean && npm test"
+    - name: report
+      service: test_codeship_example
+      command: /bin/sh -c "npm run report"

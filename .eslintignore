@@ -1,0 +1,10 @@
+target/
+errorShots/
+allure-results/
+.vscode
+node_modules
+wdio.conf.js
+.gitignore
+package.json
+package-lock.json
+.babelrc
