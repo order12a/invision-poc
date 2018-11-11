@@ -18,6 +18,7 @@ export default class LoginPage extends Page {
   }
 
   login (email, password) {
+    this.signinButton.waitForVisible();
     this.emailInput.setValue(email);
     this.passwordInput.setValue(password);
     this.signinButton.click();

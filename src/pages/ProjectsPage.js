@@ -14,6 +14,7 @@ export default class ProjectsPage extends Page {
   }
 
   expectUserLoggedIn (username) {
+    this.projectsHeader.waitForVisible();
     expect(this.projectsHeader.selector).to.be.visible();
     expect(this.userMenuLink.selector).to.have.text(username);
   }

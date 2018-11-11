@@ -6,6 +6,7 @@ let localConfig = Object.assign(remoteConfig, {
     browserName: 'chrome',
     maxInstances: 1,
     chromeOptions: {
+      args: ['--start-maximized'],
       prefs: {
         'download.default_directory': downloadDir
       }

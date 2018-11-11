@@ -7,6 +7,6 @@
     - name: tests
       service: test-codeship-example
       command: /bin/sh -c "npm run clean && npm test"
-    - name: report
-      service: test-codeship-example
-      command: /bin/sh -c "npm run report:generate"
+- name: report
+  service: test-codeship-example
+  command: /bin/sh -c "npm run report:generate"

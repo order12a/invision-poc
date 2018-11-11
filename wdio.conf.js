@@ -27,8 +27,7 @@ exports.config = {
     // Server Configurations
     // =====================
     // Host address of the running Selenium server.
-    //TODO use own selenoid url
-    host: '192.268.12.54',
+    host: '104.248.22.249',
     port: 4444,
     path: '/wd/hub',
 
@@ -59,20 +58,22 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-        maxInstances: 5,
+        maxInstances: 1,
         browserName: 'chrome',
         chromeOptions: {
+            args: ['--start-maximized'],
             prefs: {
                 'download.default_directory': downloadDir
             }
-        }
+        },
+        enableVNC: true,
     }],
 
     // ===================
@@ -176,6 +177,7 @@ exports.config = {
 
         global.expect = chai.expect;
 
+        browser.windowHandleSize({width: 1920, height: 1080});
         browser.windowHandleMaximize();
     },
     /**
