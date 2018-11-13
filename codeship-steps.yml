@@ -6,7 +6,7 @@
       command: npm run lint
     - name: tests
       service: test-codeship-example
-      command: /bin/sh -c "npm run clean && npm test"
+      command: /bin/sh -c "npm run clean && npm test && npm run report:generate"
 - name: report
   service: test-codeship-example
   command: /bin/sh -c "npm run report:generate"
